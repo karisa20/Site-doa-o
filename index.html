@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe Alimentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#doacao">Doação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        <h1>Doe Alimentos, Monte sua Sacola com carinho</h1>
+        <div>
+            <h1>DOE ALIMENTOS</h1>
+            <p class="subtitle">sem sair de casa</p>
+    
+        <div>
+            <label for="email">Digite Seu E-mail:</label>
+            <input type="email" id="email" required>
+            <input type="password" placeholder="Senha" required>
+            <button>Login</button>
+        </div>
+    </header>
+
+    <section class="carrosel">
+
+        <div class="carrosel-contente"> <!--Botões inputs-->
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro"><!--classe a mais (primeiro/segundo/etc). Para distinguir as classes tem que ter espaço entre elas-->
+                <img class="img-desktop" src="./img/OyFlj7euS5lrzS6O341PZVLZGJdwWv0yMULfya5G.png" alt="Doação" width="1600" height="600">
+               <!-- <a href="#"><img src="imgs/a730340106.webp" alt="Orquídea"></a> se eu quisesse colocar um link dentro da img-->
+               <img class="img-mobile" src="./img/OyFlj7euS5lrzS6O341PZVLZGJdwWv0yMULfya5G.png" alt="Doação" width="1040" height="600">
+            </div> 
+
+            <div class="slide-box segundo"> <!--contém imagens tipo desktop e mobile-->
+                <img class="img-desktop" src="./img/imagens_varal-solidario-avare.jpg" alt="Doação Roupas" width="1800" height="600">
+                <img class="img-mobile" src="./img/imagens_varal-solidario-avare.jpg" alt="Doação Roupas" width="1040" height="600">
+            </div>
+
+            <div class="slide-box terceiro">
+                <img class="img-desktop" src="./img/foto-materia-alunos-da-unifor-promovem-doaca-roupas-alimentos.webp" alt="Doação Alimentos" width="1800" height="600">
+                <img class="img-mobile" src="./img/imagens_varal-solidario-avare.jpg" alt="Doação Alimentos" width="1040" height="600">
+            </div>
+            
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>           
+                <label for="radio2" class="manual-btn"></label>           
+                <label for="radio3" class="manual-btn"></label>           
+            </div>
+
+        </div>
+        <!--slide carrosel https://www.youtube.com/watch?v=sk7mgXO-FeQ-->
+    </section>
+    <main>
+        <h2>Escolha os produtos que deseja doar</h2>
+        <div id="produtos">
+            <div class="produto">
+                <span>Açúcar</span>
+                <span>R$ 4,14</span>
+                <button onclick="addToCart('Açúcar', 4.14)">+</button>
+            </div>
+            <div class="produto">
+                <span>Arroz</span>
+                <span>R$ 6,25</span>
+                <button onclick="addToCart('Arroz', 6.25)">+</button>
+            </div>
+            <!-- Adicione mais produtos conforme necessário -->
+        </div>
+        <h3>Total da Sacola: R$ <span id="total">0.00</span></h3>
+        <button onclick="finalizarDoacao()">Finalizar Doação</button>
+    </main>
+    
+    <footer>
+        <p>Você também pode doar via transferência bancária.</p>
+        <p>Banco de Alimentos RS | CNPJ: 04.580.781/0001-91</p>
+        <p>Banco do Brasil | Agência: 1889-9 | Conta Corrente: 122.323-2</p>
+        <p>Banco Itaú | Agência: 1687 | Conta Corrente: 29.898-2</p>
+        <p>Banco Santander | Agência: 1001 | Conta Corrente: 04.580.781/0001-91</p>
+        <p>Pix | Chave CNPJ: 04.580.781/0001-91</p>
+    </footer>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

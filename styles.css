@@ -1,0 +1,98 @@
+/*css reset: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* header {
+    background-image: url(./img/OyFlj7euS5lrzS6O341PZVLZGJdwWv0yMULfya5G.png);
+    background-color: #ffee02;
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 2000px;
+    height: 400px;
+} */
+
+h1 {
+    color: #f44336;
+}
+
+.produto {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* Carrossel responsive*/
+section.carrosel{
+    margin: 0 auto; /*centralizar*/
+    width: 100%; /* para ocupar todo espaço da tela*/
+    height: auto;
+    padding: 0 !important; /*colocando importante para que ele não crie paddings adicionais*/
+    overflow: hidden;/*barra de rolagem fique escondida mesmo que o conteúdo vaze da tela*/
+}
+.carrosel-contente{
+    width: 400%; /*bem exagerado, para que caiba todas as imgens e ainda sobre*/
+    height: auto;
+    display: flex; /*para que as divs fiquem uma do lado da outra*/
+
+}
+.carrosel-contente input, .img-mobile{
+    display: none;/*para deixar os inputs escondidos*/
+}
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+.slide-box img{
+   width: 100%; 
+}
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    bottom: -150px;
+    display: flex;
+    justify-content: center;
+}
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child)/*pra não aplicar espaço na última bolinha e tirar aquela emboleira de pontos*/{
+    margin-right: 10px;
+}
+.nav-manual .manual-btn:hover{
+    background-color: green;
+}
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{/*quando radio1 estiver marcado aconteça algo*/
+    background-color: green;
+}
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+@media screen and (max-width: 928px){
+    .img-desktop{
+        display: none; /*fazendo as imgs desktop sumirem*/
+    }
+    .img-mobile{
+        display: block;/* e aparecerem as imgs de mobile*/
+    }
+}
+
